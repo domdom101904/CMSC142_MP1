@@ -1,4 +1,4 @@
-//Te goal is to simply literally insert the contents of the included files
+//The goal is to simply literally insert the contents of the included files
 //in the c/c++ source file, replacing the preprocessor directives in the 
 //correct order. When a header file is included more than once, insert the 
 //first include and disregard the succeeding ones.
