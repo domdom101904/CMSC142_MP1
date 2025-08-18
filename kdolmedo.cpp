@@ -30,6 +30,7 @@ void readInclude(string file){
         getline(reader, line);
             //sir wants us to read multiple files
             //this line returns 0 when it reaches the end of the file
+            //testing
 
         stringstream ss(line);
 
