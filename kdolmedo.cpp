@@ -27,7 +27,10 @@ void readInclude(string file){
         string line,str;
         //#include "sample.h"
 
-        getline(reader, line);
+        while (getline(reader, line)) {
+            // process each line, literally
+            cout << line << endl;
+        }
             //sir wants us to read multiple files
             //this line returns 0 when it reaches the end of the file
             //testing
