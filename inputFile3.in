@@ -1,0 +1,10 @@
+#include "sample.h"
+#include "sample7.h"
+int main(){
+	todo4();
+	todo9(9,4);
+	todo14(2,4,9);
+	todo21();
+	todo22(12,25);
+	return 0;
+}

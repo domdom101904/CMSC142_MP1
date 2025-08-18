@@ -1,0 +1,22 @@
+void todo15();
+void todo16(int,int);
+void todo17(int,int);
+void todo18(int,int,int);
+void todo11();
+void todo12(int,int);
+void todo13(int,int);
+void todo14(int,int,int);
+void todo7();
+void todo8(int,int);
+void todo9(int,int);
+void todo10(int,int,int);
+void todo4();
+void todo5(int,int);
+void todo6(int,int);
+void todo5(int,int,int);
+int main(){
+	todo4();
+	todo9(9,4);
+	todo14(2,4,9);
+	return 0;
+}
