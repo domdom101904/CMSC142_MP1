@@ -20,7 +20,18 @@ void readInclude(string file){
 
     if(reader.is_open()){
         string line,str;
+        //#include "sample.h"
         getline(reader, line);
+
+        stringstream ss(line);
+
+        ss>>str;
+
+        cout<<"first: "<<str<<endl;
+
+        ss>>str;
+
+        cout<<"second: "<<str<<endl;
 
     }
 
