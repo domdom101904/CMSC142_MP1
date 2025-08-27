@@ -1,7 +1,12 @@
+//Kyle Dominic D. Olmedo
+//CMSC 142 - A
+//MP 1
+
 //The goal is to simply literally insert the contents of the included files
 //in the c/c++ source file, replacing the preprocessor directives in the 
 //correct order. When a header file is included more than once, insert the 
 //first include and disregard the succeeding ones.
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -26,7 +31,7 @@ void readInclude(string file){
     if (visit.count(file)) return; // skip if already read
     visit.insert(file);
 
-    ifstream reader(file);
+    ifstream reader(file); //reads file
 
     if(reader.is_open()){
         string line;
