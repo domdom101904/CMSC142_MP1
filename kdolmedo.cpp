@@ -2,10 +2,10 @@
 //in the c/c++ source file, replacing the preprocessor directives in the 
 //correct order. When a header file is included more than once, insert the 
 //first include and disregard the succeeding ones.
-
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <set>
 
 using namespace std;
 
@@ -21,10 +21,15 @@ int main(){
 }
 
 void readInclude(string file){
+    static set<string> visit;   // remembers which files were already included
+
+    if (visit.count(file)) return; // skip if already read
+    visit.insert(file);
+
     ifstream reader(file);
 
     if(reader.is_open()){
-        string line,str;
+        string line;
 
         while (getline(reader, line)) {
             stringstream ss(line);  
@@ -32,11 +37,10 @@ void readInclude(string file){
             ss >> first >> second;
 
             if (first == "#include" && !second.empty()) {
-                // remove include header file
+                // remove include header thingy
                 string newFile = second.substr(1, second.length()-2);
                 readInclude(newFile);  // recursive call
             } else if (!line.empty()) {
-                // only print if it's not an include line or blank
                 cout << line << endl;
             }
         }
